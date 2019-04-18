@@ -10,9 +10,9 @@
 
 ## Descriptions
 
-* top20.py
+* reportExtract.py
   - This script unzips, moves, and sorts all 63 daily reports in to the top 20 directory and the others in to a dated directory
 
-* fdeny.py
+* firewallParse.py
   - This script parses the firewall deny rules from the firewall deny csv file
 
