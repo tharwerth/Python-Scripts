@@ -23,9 +23,9 @@ ips = []
 ports = []
 deDupedIPs = []
 datearray = []
-rootdir = "C:\\Users\\61653\\Documents\\logs"
+rootdir = "%filepath%\\logs"
 topdir = ""
-fdeny = "HDSFirewallDenybyLocationWithExclusions"
+fdeny = "%filename%"
 csvFromLR = ()
 
 
