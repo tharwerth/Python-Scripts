@@ -12,23 +12,17 @@ import tarfile
 import shutil
 
 #variable defenitions
-zippath = "C:\\Users\\61653\\Documents\\logs\\zipped"
-zipdest = "C:\\Users\\61653\\Documents\\logs\\toFile"
-archive = "C:\\Users\\61653\\Documents\\logs\\archive"
-extracted = "C:\\Users\\61653\\Documents\\logs\\extracted"
-rootdir = "C:\\Users\\61653\\Documents\\logs"
+zippath = "%filepath%\\logs\\zipped"
+zipdest = "%filepath%\\logs\\toFile"
+archive = "%filepath%\\logs\\archive"
+extracted = "%filepath%\\logs\\extracted"
+rootdir = "%filepath%ocuments\\logs"
 datelist = []
 archive = []
 archive = []
 
 #list stores the names of the top 20 daily reports
-top20list = ['MalwareDetected', 'CompromisesDetected_ByEntity_ImpactedHost', 'HDSForeignTraffic', 
-			'SMTPUnauthorizedActivity', 'DisabledAccounts_ByCommonEvent_Account', 'NetworkConnectionSummary_ByHighestLogCount', 
-			'TopTargetedHosts_ByHighestLogCount', 'AuditExceptionsEventSummary_ByOriginLogin', 'AttacksDetected_ByEntity_ImpactedHost', 
-			'AuditExceptionsEventSummary_ByImpactedHost', 'SecurityEventSummary_ByImpactedApplication','SecurityEventSummary_ByImpactedHost_', 
-			'UserAuthenticationSummary_ByEntity_ImpactedHost', 'AdministrativeAuthenticationSummary_ByImpactedHost',
-			'AIETrafficPCI=_StoresCommTAH_', 'HDSPCIDSS_AIETrafficStores=_PCICommTAH', 'AIEDeniedPCI=_InternetCommTAH', 
-			'AIEInvalidPCI=_InternetTAH', 'HDSPaloAltoWildfireFailedVirusActivity', 'URLDailyReview']
+top20list = ['%namesofreports%']
 
 #unzip .gz files and store tarballs
 print("Unzipping files")
@@ -134,7 +128,7 @@ for root, dirs, files in os.walk(zipdest):
 							x += 1
 
 #Create the dated log review folder
-rootdir = "C:\\Users\\61653\\Documents\\logs"
+rootdir = "%filepath%\\logs"
 #check for all dates in the date list, for every item in the list, create the necessary folders
 for date in datelist:
 	reviewdir = os.path.join(rootdir,date)
